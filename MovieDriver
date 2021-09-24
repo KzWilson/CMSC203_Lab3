@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class MovieDriver
+{
+    public static void main(String[] args)
+    {
+    String decision;
+    
+    Scanner keyboard = new Scanner(System.in);
+ do {   
+    System.out.print("\nEnter the name of a movie\n");
+    keyboard.nextLine();
+    
+    System.out.print("Enter the rating of the movie\n");
+    keyboard.nextLine();
+    
+    System.out.print("Enter the number of tichets sold\n");
+    keyboard.nextLine();
+    
+    System.out.println("Would you like to enter another? Please Enter Yes or No: ");
+	  decision = keyboard.nextLine();
+		
+	   while (!decision.equals("Yes")&&!decision.equals("yes") && !decision.equals("No")&&!decision.equals("no") 
+ 			&& !decision.equals("YES") &&!decision.equals("NO")) {
+						System.out.print("Please enter Yes or No: ");
+ 					decision = keyboard.nextLine();  }
+ 	} 
+ while(decision.equals ("Yes")|| decision.equals ("YES")||decision.equals ("yes")); 
+    keyboard.close();
+        
+    if (decision.equals ("No")|| decision.equals ("NO")||decision.equals ("no"))
+	{
+		System.out.println("Goodbye");
+	}
+ }
+}    
+ 
